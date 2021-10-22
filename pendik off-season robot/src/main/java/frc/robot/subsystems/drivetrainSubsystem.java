@@ -34,17 +34,6 @@ public class drivetrainSubsystem extends SubsystemBase {
     private final DifferentialDrive drive = new DifferentialDrive(left, right);
 
     private final Joystick joystick = new Joystick(Constants.joystick.joystickPort);
-    private final JoystickButton buttonX = new JoystickButton(joystick, 0);
-    private final JoystickButton buttonA = new JoystickButton(joystick, 1);
-    private final JoystickButton buttonB = new JoystickButton(joystick, 2);
-    private final JoystickButton buttonY = new JoystickButton(joystick, 3);
-    private final JoystickButton buttonLeft = new JoystickButton(joystick, 4);
-    private final JoystickButton buttonRight = new JoystickButton(joystick, 5);
-    private final JoystickButton buttonTopLeft = new JoystickButton(joystick, 6);
-    private final JoystickButton buttonBack = new JoystickButton(joystick, 8);
-    private final JoystickButton buttonStart = new JoystickButton(joystick, 9);
-    private final JoystickButton buttonBigLeft = new JoystickButton(joystick, 10);
-    private final JoystickButton buttonBigRight = new JoystickButton(joystick, 11);
 
     private static drivetrainSubsystem INSTANCE = new drivetrainSubsystem();
 
@@ -79,5 +68,9 @@ public class drivetrainSubsystem extends SubsystemBase {
     @Override
     public void simulationPeriodic() {
         // This method will be called once per scheduler run during simulation
+    }
+
+    public Object getJoystick() {
+        return null;
     }
 }
