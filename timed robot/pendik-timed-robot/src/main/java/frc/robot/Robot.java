@@ -7,7 +7,7 @@
 
 package frc.robot;
 
-import javax.swing.Timer;
+import edu.wpi.first.wpilibj.Timer;
 
 import edu.wpi.first.wpilibj.*;
 import edu.wpi.first.wpilibj.drive.DifferentialDrive;
@@ -28,9 +28,7 @@ public class Robot extends TimedRobot {
   public DifferentialDrive myDrive = new DifferentialDrive(left, right);
 
   public Timer theTimer = new Timer();
-
   public Joystick myJoystick = new Joystick(0);
-
 
   /**
    * This method is run when the robot is first started up and should be used for
@@ -91,8 +89,8 @@ public class Robot extends TimedRobot {
   public void teleopPeriodic() {
     myDrive.tankDrive(myJoystick.getRawAxis(1), myJoystick.getRawAxis(3));
 
-    leftMC.set(myJoystick.getRawAxis(1));
-    rightMC.set(myJoystick.getRawAxis(3));
+    left.set(myJoystick.getRawAxis(1));
+    right.set(myJoystick.getRawAxis(3));
 
   }
 
